@@ -1,0 +1,13 @@
+package com.minipanda.bracket.task.servlet.controller;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class TaskHomeController {
+
+	@RequestMapping("/")
+	public String home(){
+		return "/home";
+	}
+}

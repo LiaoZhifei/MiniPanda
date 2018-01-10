@@ -1,0 +1,5 @@
+/target/
+/Programs/
+.classpath
+.project
+/.settings/
