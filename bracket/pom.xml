@@ -22,6 +22,18 @@
 			<scope>provided</scope>
 		</dependency>
 		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>taglibs</groupId>
+			<artifactId>standard</artifactId>
+			<version>1.1.2</version>
+		</dependency>
+
+		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>3.8.1</version>
@@ -124,7 +136,7 @@
 					<server>localTomcat7</server>
 					<username>lzf</username>
 					<password>liao254610</password>
-					<path>/app1</path>
+					<path>/bracket</path>
 					<useBodyEncodingForURI>true</useBodyEncodingForURI>
 					<uriEncoding>UTF-8</uriEncoding>
 				</configuration>

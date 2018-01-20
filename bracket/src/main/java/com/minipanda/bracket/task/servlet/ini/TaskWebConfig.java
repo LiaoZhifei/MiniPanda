@@ -8,10 +8,11 @@ import org.springframework.web.servlet.config.annotation.DefaultServletHandlerCo
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
+import org.springframework.web.servlet.view.JstlView;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan("com.minipanda.bracket.servlet.task")
+@ComponentScan("com.minipanda.bracket.task.*")
 public class TaskWebConfig extends WebMvcConfigurerAdapter {
 
 	@Bean
@@ -19,13 +20,13 @@ public class TaskWebConfig extends WebMvcConfigurerAdapter {
 		InternalResourceViewResolver resolver = new InternalResourceViewResolver();
 		resolver.setPrefix("/task");
 		resolver.setSuffix(".jsp");
-		resolver.setExposeContextBeansAsAttributes(true);
+		//resolver.setExposeContextBeansAsAttributes(true);
+		resolver.setViewClass(JstlView.class);
 		return resolver;
 	}
-	
+
 	@Override
 	public void configureDefaultServletHandling(DefaultServletHandlerConfigurer configurer) {
 		configurer.enable();
 	}
-
 }

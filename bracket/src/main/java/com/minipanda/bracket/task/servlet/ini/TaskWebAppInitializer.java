@@ -16,7 +16,7 @@ public class TaskWebAppInitializer extends AbstractAnnotationConfigDispatcherSer
 
 	@Override
 	protected String[] getServletMappings() {
-		// 所有的"/app/task/*"请求都进入到这个servlet中
+		// 所有的"/app/task/"请求都进入到这个servlet中
 		return new String[]{"/task/*"};
 	}
 
